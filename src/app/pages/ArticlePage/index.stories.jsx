@@ -19,7 +19,13 @@ import articleData from '#data/news/articles/c5jje4ejkqvo';
 storiesOf('Pages/Article Page', module)
   .addDecorator(withKnobs)
   .add('Articles', () => (
-    <ToggleContextProvider>
+    <ToggleContextProvider
+      toggles={{
+        eventTracking: {
+          enabled: true,
+        },
+      }}
+    >
       {/* Service set to pidgin to enable most read. Article data is in english */}
       <ServiceContextProvider service="pidgin">
         <RequestContextProvider

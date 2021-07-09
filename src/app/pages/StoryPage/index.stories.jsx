@@ -65,6 +65,11 @@ const withSecondaryColumnsKnob = pageData => storyFn => {
             pageData={pageData}
             service={service}
             mostReadEndpointOverride="./data/mundo/mostRead/index.json"
+            toggles={{
+              eventTracking: {
+                enabled: true,
+              },
+            }}
           />
         </BrowserRouter>
       );
